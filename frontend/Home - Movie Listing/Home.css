@@ -37,15 +37,12 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent; /* UPDATED for full transparency */
-  /* backdrop-filter: blur(50px); REMOVED for full transparency */
+  background: transparent; 
   z-index: 1000;
   padding: 20px 50px;
   transition: all 0.3s ease;
-  /* Changed from gradient to consistent semi-transparent background */
 }
 
-/* Added scrolled state for navbar background */
 .navbar.scrolled {
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(10px);
@@ -131,7 +128,6 @@ body {
   overflow: hidden;
   margin-top: 0;
   padding-top: 80px;
-  /* adjusted padding and alignment for hero content positioning */
 }
 
 .hero-background {
@@ -148,7 +144,6 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
-  /* adjusted opacity for better content visibility */
   display: block;
 }
 
@@ -160,7 +155,6 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
-  /* adjusted gradient for left-side emphasis */
   z-index: 1;
 }
 
@@ -169,12 +163,10 @@ body {
   z-index: 2;
   padding: 0 60px;
   max-width: 700px;
-  /* set max-width for content column and adjusted padding */
   animation: slideUp 0.8s ease-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* centered vertically */
 }
 
 @keyframes slideUp {
@@ -190,7 +182,6 @@ body {
 
 .hero-title {
   font-size: 72px;
-  /* reduced from 120px back to 72px for better proportions */
   font-weight: 900;
   letter-spacing: 4px;
   margin-bottom: 15px;
@@ -204,7 +195,6 @@ body {
   letter-spacing: 3px;
   margin-bottom: 25px;
   color: var(--text-primary);
-  /* changed subtitle color from accent to white */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -213,7 +203,6 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--text-primary);
-  /* changed label color to white */
   text-transform: uppercase;
   margin-bottom: 15px;
   display: flex;
@@ -245,7 +234,6 @@ body {
   padding: 14px 36px;
   border: 2px solid transparent;
   border-radius: 24px;
-  /* increased border-radius to 24px for more rounded pill-like buttons */
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -288,7 +276,7 @@ body {
   padding: 50px;
   max-width: 1400px;
   margin: 0 auto;
-  /* removed border-left accent line */
+
 }
 
 .section-title {
@@ -302,8 +290,6 @@ body {
 /* ============================================
    Carousel
    ============================================ */
-
-/* Changed carousel from horizontal scroll to vertical grid layout */
 .carousel-container {
   overflow: visible;
   scroll-behavior: smooth;
@@ -325,7 +311,6 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* ensure images fit frame perfectly */
   width: 100%;
 }
 
@@ -337,7 +322,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ensure images fill container without distortion */
+  
   display: block;
 }
 
@@ -384,7 +369,6 @@ body {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  /* ensure images fit frame perfectly */
   width: 100%;
 }
 
@@ -392,7 +376,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ensure images fill container without distortion */
   display: block;
 }
 
@@ -522,12 +505,10 @@ body {
     padding: 40px 20px;
     max-width: 100%;
     padding-top: 80px;
-    /* adjusted top padding for tablet */
   }
 
   .hero-title {
     font-size: 64px;
-    /* adjusted for tablet size */
   }
 
   .hero-subtitle {
@@ -543,7 +524,6 @@ body {
   }
 
   .carousel-item {
-    /* flex: 0 0 150px; -- No longer needed due to grid layout, but width controlled by grid-template-columns */
     height: 200px;
   }
 
@@ -577,12 +557,10 @@ body {
 
   .hero-content {
     padding-top: 60px;
-    /* adjusted top padding for mobile */
   }
 
   .hero-title {
     font-size: 44px;
-    /* adjusted for mobile size */
   }
 
   .hero-subtitle {
@@ -590,7 +568,6 @@ body {
   }
 
   .carousel-item {
-    /* flex: 0 0 130px; -- No longer needed */
     height: 180px;
   }
 
