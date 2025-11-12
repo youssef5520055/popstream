@@ -37,15 +37,12 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent; /* UPDATED for full transparency */
-  /* backdrop-filter: blur(50px); REMOVED for full transparency */
+  background: transparent; 
   z-index: 1000;
   padding: 20px 50px;
   transition: all 0.3s ease;
-  /* Changed from gradient to consistent semi-transparent background */
 }
 
-/* Added scrolled state for navbar background */
 .navbar.scrolled {
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(10px);
@@ -126,10 +123,11 @@ body {
   position: relative;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
   margin-top: 0;
-  /* removed margin-top: 70px to extend hero section full height behind navbar */
+  padding-top: 80px;
 }
 
 .hero-background {
@@ -145,10 +143,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
-  /* ensure image fills the frame perfectly without distortion */
+  opacity: 0.5;
   display: block;
-  /* prevents inline spacing issues */
 }
 
 .hero-background::after {
@@ -158,25 +154,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 50%, rgba(20, 20, 20, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 60px 50px;
-  max-width: 100%;
-  /* changed max-width from 600px to 100% for full width */
+  padding: 0 60px;
+  max-width: 700px;
   animation: slideUp 0.8s ease-out;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  /* added flex layout to position content at top */
-  height: 100%;
-  /* added height to fill hero section */
-  padding-top: 120px;
-  /* added top padding to position title below navbar */
+  justify-content: center;
 }
 
 @keyframes slideUp {
@@ -191,62 +181,68 @@ body {
 }
 
 .hero-title {
-  font-size: 120px;
-  /* increased from 72px to 120px for larger prominent display */
-  font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
   line-height: 1.1;
-  /* added line-height for better spacing of large text */
 }
 
 .hero-subtitle {
   font-size: 48px;
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  color: var(--accent-color);
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: var(--text-primary);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-label {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-transform: uppercase;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-label::before {
+  content: "▶";
+  color: var(--accent-color);
+  font-size: 10px;
 }
 
 .hero-description {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 30px;
-  max-width: 600px;
-  /* added max-width to limit description text width */
+  margin-bottom: 40px;
+  max-width: 550px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: center;
 }
 
 .btn {
-  padding: 12px 32px;
+  padding: 14px 36px;
   border: 2px solid transparent;
-  border-radius: 8px;
-  /* increased border-radius from 4px to 8px for more rounded appearance */
+  border-radius: 24px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .btn-play {
@@ -256,7 +252,8 @@ body {
 
 .btn-play:hover {
   background-color: #f40812;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(229, 9, 20, 0.4);
 }
 
 .btn-more-info {
@@ -266,8 +263,9 @@ body {
 }
 
 .btn-more-info:hover {
-  background-color: var(--text-primary);
-  color: var(--primary-bg);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-primary);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
@@ -278,7 +276,7 @@ body {
   padding: 50px;
   max-width: 1400px;
   margin: 0 auto;
-  /* removed border-left accent line */
+
 }
 
 .section-title {
@@ -292,8 +290,6 @@ body {
 /* ============================================
    Carousel
    ============================================ */
-
-/* Changed carousel from horizontal scroll to vertical grid layout */
 .carousel-container {
   overflow: visible;
   scroll-behavior: smooth;
@@ -315,7 +311,6 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* ensure images fit frame perfectly */
   width: 100%;
 }
 
@@ -327,7 +322,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ensure images fill container without distortion */
+  
   display: block;
 }
 
@@ -374,7 +369,6 @@ body {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  /* ensure images fit frame perfectly */
   width: 100%;
 }
 
@@ -382,7 +376,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* ensure images fill container without distortion */
   display: block;
 }
 
@@ -512,12 +505,10 @@ body {
     padding: 40px 20px;
     max-width: 100%;
     padding-top: 80px;
-    /* adjusted top padding for tablet */
   }
 
   .hero-title {
     font-size: 64px;
-    /* adjusted for tablet size */
   }
 
   .hero-subtitle {
@@ -533,7 +524,6 @@ body {
   }
 
   .carousel-item {
-    /* flex: 0 0 150px; -- No longer needed due to grid layout, but width controlled by grid-template-columns */
     height: 200px;
   }
 
@@ -567,12 +557,10 @@ body {
 
   .hero-content {
     padding-top: 60px;
-    /* adjusted top padding for mobile */
   }
 
   .hero-title {
     font-size: 44px;
-    /* adjusted for mobile size */
   }
 
   .hero-subtitle {
@@ -580,7 +568,6 @@ body {
   }
 
   .carousel-item {
-    /* flex: 0 0 130px; -- No longer needed */
     height: 180px;
   }
 
