@@ -126,10 +126,12 @@ body {
   position: relative;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
   margin-top: 0;
-  /* removed margin-top: 70px to extend hero section full height behind navbar */
+  padding-top: 80px;
+  /* adjusted padding and alignment for hero content positioning */
 }
 
 .hero-background {
@@ -145,10 +147,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
-  /* ensure image fills the frame perfectly without distortion */
+  opacity: 0.5;
+  /* adjusted opacity for better content visibility */
   display: block;
-  /* prevents inline spacing issues */
 }
 
 .hero-background::after {
@@ -158,25 +159,22 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 50%, rgba(20, 20, 20, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+  /* adjusted gradient for left-side emphasis */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 60px 50px;
-  max-width: 100%;
-  /* changed max-width from 600px to 100% for full width */
+  padding: 0 60px;
+  max-width: 700px;
+  /* set max-width for content column and adjusted padding */
   animation: slideUp 0.8s ease-out;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  /* added flex layout to position content at top */
-  height: 100%;
-  /* added height to fill hero section */
-  padding-top: 120px;
-  /* added top padding to position title below navbar */
+  justify-content: center;
+  /* centered vertically */
 }
 
 @keyframes slideUp {
@@ -191,62 +189,72 @@ body {
 }
 
 .hero-title {
-  font-size: 120px;
-  /* increased from 72px to 120px for larger prominent display */
-  font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 72px;
+  /* reduced from 120px back to 72px for better proportions */
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
   line-height: 1.1;
-  /* added line-height for better spacing of large text */
 }
 
 .hero-subtitle {
   font-size: 48px;
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  color: var(--accent-color);
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: var(--text-primary);
+  /* changed subtitle color from accent to white */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-label {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  /* changed label color to white */
   text-transform: uppercase;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-label::before {
+  content: "▶";
+  color: var(--accent-color);
+  font-size: 10px;
 }
 
 .hero-description {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 30px;
-  max-width: 600px;
-  /* added max-width to limit description text width */
+  margin-bottom: 40px;
+  max-width: 550px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: center;
 }
 
 .btn {
-  padding: 12px 32px;
+  padding: 14px 36px;
   border: 2px solid transparent;
-  border-radius: 8px;
-  /* increased border-radius from 4px to 8px for more rounded appearance */
+  border-radius: 24px;
+  /* increased border-radius to 24px for more rounded pill-like buttons */
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .btn-play {
@@ -256,7 +264,8 @@ body {
 
 .btn-play:hover {
   background-color: #f40812;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(229, 9, 20, 0.4);
 }
 
 .btn-more-info {
@@ -266,8 +275,9 @@ body {
 }
 
 .btn-more-info:hover {
-  background-color: var(--text-primary);
-  color: var(--primary-bg);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-primary);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
