@@ -41,12 +41,11 @@ document.querySelectorAll(".footer-links a, .footer-secondary-links a").forEach(
   })
 })
 
-// Navbar scroll effect
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar")
   if (window.scrollY > 100) {
-    navbar.style.backgroundColor = "rgba(20, 20, 20, 0.95)"
+    navbar.classList.add("scrolled")
   } else {
-    navbar.style.backgroundColor = "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%)"
+    navbar.classList.remove("scrolled")
   }
 })
