@@ -321,9 +321,9 @@ body {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  
+  object-fit: contain;
   display: block;
+  background-color: var(--secondary-bg);
 }
 
 .carousel-item .item-overlay {
@@ -370,13 +370,56 @@ body {
   overflow: hidden;
   cursor: pointer;
   width: 100%;
+  /* Added transition and hover effect to match carousel items */
+  transition: transform 0.3s ease;
+}
+
+.top-10-item:hover {
+  /* Added scale transform on hover for consistency */
+  transform: scale(1.08);
 }
 
 .top-10-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background-color: var(--secondary-bg);
+}
+
+/* Added overlay for film name display on hover, matching carousel-item pattern */
+.top-10-item .item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.top-10-item:hover .item-overlay {
+  opacity: 1;
+}
+
+.top-10-item h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.top-10-item:hover h3 {
+  opacity: 1;
 }
 
 .top-10-number {
@@ -387,15 +430,6 @@ body {
   font-weight: 700;
   color: var(--accent-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  z-index: 2;
-}
-
-.top-10-item h3 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 14px;
-  font-weight: 600;
   z-index: 2;
 }
 
@@ -513,14 +547,6 @@ body {
 
   .hero-subtitle {
     font-size: 32px;
-  }
-
-  .section {
-    padding: 30px 20px;
-  }
-
-  .section-title {
-    font-size: 22px;
   }
 
   .carousel-item {
