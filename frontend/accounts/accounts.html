@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Who is watching?</title>
+  <link rel="stylesheet" href="accounts.css" />
+</head>
+<body class="accounts-page">
+  <!-- Background -->
+  <div class="bg"></div>
+  <div class="vignette"></div>
+
+  <!-- Main content -->
+  <main class="wrap">
+    <header class="hero">
+      <h1>Who is watching?</h1>
+      <p>Tailor your movie streaming experience by setting up dedicated profiles for each viewer</p>
+    </header>
+
+    <section class="profiles" id="profilesGrid" aria-label="Profiles">
+      <!-- Profile 1 -->
+      <button class="tile profile active" data-name="Roaa" data-id="roaa" aria-label="Open Roaa profile">
+        <span class="ring"></span>
+        <img class="avatar" src="./images/pp photo.png" alt="Roaa avatar" />
+        <span class="name">Roaa</span>
+      </button>
+
+      <!-- Profile 2 -->
+      <button class="tile profile" data-name="jo" data-id="jo" aria-label="Open jo profile">
+        <span class="ring"></span>
+        <img class="avatar" src="./images/avatar-jo.jpg" alt="jo avatar" />
+        <span class="name">jo</span>
+      </button>
+
+      <!-- Profile 3 (placeholder) -->
+      <button class="tile profile ghost" data-name="Boom" data-id="boom" aria-label="Open Boom profile">
+        <span class="ring"></span>
+        <img class="avatar" src="" alt="Boom avatar placeholder" />
+        <span class="name">Boom</span>
+      </button>
+
+      <!-- Add new -->
+      <button class="tile add" id="addProfile" aria-label="Add new profile">
+        <span class="plus">+</span>
+        <span class="add-text">Add new profile</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- Hidden file input -->
+  <input id="filePicker" type="file" accept="image/*" />
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-icons">
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"></path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <rect width="24" height="24" fill="none"></rect>
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1-2.6c4 0 6-2 6-5 0-1.7-.6-3.2-1.6-4.4a2.5 2.5 0 0 1-.4-2.5s-1.2-.4-4 1.5a13.81 13.81 0 0 0-7 0c-2.7-1.9-4-1.5-4-1.5a2.5 2.5 0 0 1-.4 2.5C3.6 8.8 3 10.3 3 12c0 3 2 5 6 5a3.37 3.37 0 0 0-1 2.6v3.87"></path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="1"></circle>
+            <circle cx="19" cy="12" r="1"></circle>
+            <circle cx="5" cy="12" r="1"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; Popstream Media Direct, LLC. All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Help</a>
+        <a href="#">Feedback</a>
+      </div>
+      <div class="footer-secondary-links">
+        <a href="#">Media Center</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Legacy Notices</a>
+        <a href="#">Account</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="accounts.js"></script>
+</body>
+</html>
