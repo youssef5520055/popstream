@@ -48,6 +48,13 @@ body{
   margin: 0 0 20px; color: #9aa6b4; font-size: 14px;
 }
 
+/* Settings button */
+.btn-settings:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-2px);
+}
+
 /* ---------- card ---------- */
 .card{
   width: min(980px, 94vw);
@@ -219,6 +226,17 @@ input:focus, textarea:focus, select:focus{
 @media (max-width: 880px){
   .card{ grid-template-columns: 1fr; }
   .avatar{ margin-top: -8px; }
+  
+  .title > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+  
+  .btn-settings {
+    width: 100%;
+    justify-content: center;
+  }
 }
 /* ============================================
    Footer
