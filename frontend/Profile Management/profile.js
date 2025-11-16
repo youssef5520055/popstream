@@ -29,14 +29,28 @@ avatarInput.addEventListener('change', function () {
   reader.readAsDataURL(file);
 });
 
-// SAVE (toast)
+// SAVE (toast) and navigate
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  
+  // Get form values for validation
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  
+  if (!fullName || !email) {
+    alert('Please fill in at least your name and email.');
+    return;
+  }
+  
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 1400);
+  setTimeout(() => {
+    toast.classList.remove('show');
+    // Navigate to account settings after saving
+    window.location.href = '../Account Settings/accounts.html';
+  }, 1500);
 });
 
-// CANCEL → reset
+// CANCEL → reset and navigate back
 document.getElementById('cancelBtn').addEventListener('click', () => {
   if (!confirm('Discard changes?')) return;
   form.reset();
@@ -44,4 +58,6 @@ document.getElementById('cancelBtn').addEventListener('click', () => {
   document.querySelector('.avatar').classList.remove('has-image');
   if (placeholder) placeholder.style.display = '';
   avatarInput.value = '';
+  // Navigate back to account settings
+  window.location.href = '../Account Settings/accounts.html';
 });

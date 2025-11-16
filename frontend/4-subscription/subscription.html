@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>popstream • Membership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="subscription.css">
+</head>
+<body>
+  <!-- subtle background posters -->
+<div class="background">
+  <img src="./images/Selection.png" alt="poster collage" class="bg1">
+  <img src="./images/Selection (1).png " alt="light overlay" class="bg2">
+</div>
+
+  <header>
+    <a class="btn-minor" href="../10-account-settings/accounts.html" aria-label="Settings" style="margin-right: 10px; display: inline-flex; align-items: center; gap: 6px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      Settings
+    </a>
+    <a class="btn-minor" href="../3-signin/signin.html" aria-label="Sign in">Sign in</a>
+    <a class="btn-primary" href="../2-signup/signup.html" aria-label="Join popstream">Join popstream</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>popstream <span class="thin">Membership</span></h1>
+      <p>Choose the perfect subscription plan for your streaming needs</p>
+    </section>
+
+    <section class="grid" role="list">
+      <!-- Standard -->
+      <article class="card" role="listitem" aria-label="Standard plan">
+        <header class="card-header">
+          <div class="plan-name">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            <span>Standard</span>
+          </div>
+        </header>
+
+        <div class="price">
+          <span class="value">$14.99</span>
+          <span class="per">/ month</span>
+        </div>
+
+        <div class="cta">
+          <button class="ghost" data-plan="Standard">Select this plan</button>
+        </div>
+
+        <ul class="features">
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Stream movies in high-definition (HD) quality</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Access to our vast library of movies and TV shows</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Watch on up to two devices simultaneously</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Cancel anytime</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Ads-Free</li>
+        </ul>
+      </article>
+
+      <!-- Premium -->
+      <article class="card highlight" role="listitem" aria-label="Premium plan">
+        <header class="card-header">
+          <div class="plan-name">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 10l5-7 5 7 5 2-10 9L2 12z"/>
+            </svg>
+            <span>Premium</span>
+          </div>
+        </header>
+
+        <div class="price">
+          <span class="value accent">$19.99</span>
+          <span class="per">/ month</span>
+        </div>
+
+        <div class="cta">
+          <button class="primary" data-plan="Premium">Select this plan</button>
+        </div>
+
+        <ul class="features">
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Stream movies in 4K Ultra HD quality</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Exclusive access to premium content and early releases</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Watch on up to four devices simultaneously</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Cancel anytime</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" fill="currentColor"/></svg> Ads-Free</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="footnote">
+      Get a 7-day free trial on any plan! Cancel anytime during the trial with no charges.
+      <br>
+      Get ready for an incredible movie streaming journey with <strong>PlayCine</strong>.
+      <a class="signup" href="../2-signup/signup.html">Sign up</a> today and let the entertainment begin!
+    </p>
+  </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-icons">
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                </a>
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"></path></svg>
+                </a>
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect width="24" height="24" fill="none"></rect><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1-2.6c4 0 6-2 6-5 0-1.7-.6-3.2-1.6-4.4a2.5 2.5 0 0 1-.4-2.5s-1.2-.4-4 1.5a13.81 13.81 0 0 0-7 0c-2.7-1.9-4-1.5-4-1.5a2.5 2.5 0 0 1-.4 2.5C3.6 8.8 3 10.3 3 12c0 3 2 5 6 5a3.37 3.37 0 0 0-1 2.6v3.87"></path></svg>
+                </a>
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Popstream Media Direct, LLC. All rights reserved</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+                <a href="#">Feedback</a>
+            </div>
+            <div class="footer-secondary-links">
+                <a href="#">Media Center</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Legacy Notices</a>
+                <a href="#">Account</a>
+            </div>
+        </div>
+    </footer>
+  <script src="subscription.js"></script>
+</body>
+</html>
