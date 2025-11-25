@@ -43,11 +43,15 @@ body::after {
   font-size: 1.5rem;
   font-weight: 700;
   color: #ff1a1a; /* red color */
+  text-decoration: none;
+  display: inline-block;
 }
 
 .logo:hover {
   color: #e60000; /* darker red on hover */
   cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 
@@ -156,6 +160,22 @@ body::after {
   }
   .floating-movie {
     display: none;
+  }
+  
+  .nav-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .nav-buttons a.signin {
+    margin-right: 0 !important;
+    font-size: 12px;
+  }
+  
+  .nav-buttons a.signin svg {
+    width: 14px !important;
+    height: 14px !important;
+    margin-right: 3px !important;
   }
 }
 

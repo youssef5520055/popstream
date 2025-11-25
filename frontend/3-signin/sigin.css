@@ -75,7 +75,7 @@ body{
 
 /* ---------- header ---------- */
 .site-header{
-  height:90px; display:flex; align-items:center;
+  height:90px; display:flex; align-items:center; justify-content:space-between;
   padding:0 3.5rem;
 }
 .logo{

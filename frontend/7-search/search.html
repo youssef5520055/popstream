@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover The Perfect Film</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <!-- Stars Background Canvas -->
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="../6-home/Home.html" class="nav-link">Home</a>
+                    <a href="search.html" class="nav-link">Movies</a>
+                    <a href="../9-series-detail/series - Movie Listing.html" class="nav-link">Series</a>
+                    <a href="search.html" class="nav-link">TV Shows</a>
+                    <a href="search.html" class="nav-link">Browse By Language</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="search.html" class="icon-btn notification-btn" style="text-decoration: none; color: inherit;">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M10 2v16M4 8h12M3 14h14"/>
+                        </svg>
+                    </a>
+                    <a href="../10-account-settings/accounts.html" class="icon-btn" style="text-decoration: none; color: inherit;" title="Settings">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </a>
+                    <a href="../10-account-settings/accounts.html" class="profile-avatar" style="text-decoration: none;">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=faces" alt="Profile">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover The Perfect Film</h1>
+                <p class="hero-subtitle">With An Effortless Search And Selection</p>
+
+                <!-- Search Box -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Animal Planet" autocomplete="off">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="8" cy="8" r="6"></circle>
+                            <path d="m12 12 4 4"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Filter Tags -->
+                <div class="filter-tags">
+                    <button class="tag" data-tag="Popular">Popular</button>
+                    <button class="tag" data-tag="Horror">Horror</button>
+                    <button class="tag" data-tag="Sci-Fi">Sci-Fi</button>
+                    <button class="tag" data-tag="Comedy">Comedy</button>
+                    <button class="tag" data-tag="Action">Action</button>
+                    <button class="tag" data-tag="Documentary">Documentary</button>
+                    <button class="tag" data-tag="Crime">Crime</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movies Section -->
+        <main class="main-content">
+            <div id="resultsContainer" class="results-container">
+                <h2 id="resultsTitle" class="results-title">All Movies</h2>
+                <div id="movieGrid" class="movie-grid"></div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="social-links">
+                    <a href="#" class="social-icon">𝕏</a>
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">▶</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© PlayCrew Media Direct, LLC. All rights reserved</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Help</a>
+                    <a href="#" class="footer-link">Devices</a>
+                    <a href="#" class="footer-link">Media Center</a>
+                    <a href="#" class="footer-link">Gift Cards</a>
+                    <a href="#" class="footer-link">Legacy Notices</a>
+                    <a href="#" class="footer-link">Account</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>
